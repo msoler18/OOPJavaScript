@@ -5,7 +5,32 @@
 </head>
 <body>
   <script>
-    
+    var person = {
+      namePerson: "Miguel",
+      last_name: "Soler",
+      profession: "Developer",
+      age: 26,
+      /*Getter
+      getName: function(){
+        return this.name;
+      },
+      //Setter
+      setName: function(name){
+        return this.name = name;
+      }*/
+      //EcmaScript 5
+      get name(){
+        return this.namePerson;
+      },
+      set name(name){
+        return this.namePerson = name;
+      }
+    }
+    //console.log(person.getName());
+    //console.log(person.setName("Pepito"));
+    //console.log(person.name("Pepito"));
+    console.log(person.name);
+    console.log(person.name = "Pepito")
   </script>  
 </body>
 </html>
