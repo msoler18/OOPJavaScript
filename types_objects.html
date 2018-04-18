@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Types Of Objects Js</title>
+</head>
+<body>
+	<script>
+		// Objects Associates to primitive Types
+		var string = "Esto es una cadena";
+		var string_obj = new String("Esto es una cadena");
+		console.log(string);
+		console.log(string_obj);
+
+		var number = 12;
+		var number_obj = new Number(12);
+		console.log(number);
+		console.log(number_obj)
+
+		var boolean = true;
+		var boolean_obj = new Boolean(true);
+		console.log(boolean);
+		console.log(boolean_obj);
+
+		var array = [1,2,3,4,"Soler","Miguel"];
+		var array_obj = new Array('0','1','2','3',"Soler","Miguel");
+		console.log(array);
+		console.log(array_obj);
+
+		var literal_object = {name: "Miguel", age: 26};
+		var object_constructor = new Object();
+		object_constructor.name = "Pablo";
+		object_constructor.age = 31;
+		console.log(literal_object);
+		console.log(object_constructor);
+
+		//Objects predefined Js
+		var now = new Date();
+    console.log(now);
+    console.log(Math);
+	</script>
+
+</body>
+</html>
