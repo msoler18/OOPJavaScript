@@ -16,4 +16,5 @@
    - Private Properties
    - Public Methods
    - Privileged Methods (Getters-Setters)
-5. Prototypes   
+5. Prototypes
+6. Heritage and Constructor  
