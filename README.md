@@ -17,4 +17,5 @@
    - Public Methods
    - Privileged Methods (Getters-Setters)
 5. Prototypes
-6. Heritage and Constructor  
+6. Heritage and Constructor
+7. Polymorphism  
