@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Object-based inheritance</title>
+</head>
+<body>
+  <script>
+    /*function Person(name,age){
+      this.name = name;
+      this.age = age;
+    }
+
+    Person.prototype.greet = function(){
+      console.log("Hola soy" + " " + this.name)
+    }
+
+    /*var person1 = new Person("Miguel",26)
+    person1.greet();
+
+    function Student(name,age,lessons){
+      Person.prototype.constructor.call(this, name, age); //Person constructor in context of Student.
+      this.lessons = lessons;
+    }
+    Student.prototype = new Person();  // Instance of Person to Student Prototype.
+    Student.prototype.constructor = Student; // Assignament to new Instances of student your builder Student...
+
+
+    Student.prototype.study = function(){
+      console.log("Studying...")
+    }
+
+    var student1 = new Student("Miguel", 26, "Js OOP")
+    console.log(student1)*/
+//===============================================================================
+  var person = {
+    name: '',
+    age: '',
+    friends: null,
+
+    init: function(name,age){  // Constructor Person
+      this.name = name;
+      this.age = age
+      this.friends = new Array();
+
+      return this;
+    },
+
+    greet: function(){
+      console.log("Hola soy" + " " + this.name);
+    }
+  };
+
+  var student = Object.create(person); // Instance of Person to Student Prototype.
+  student.lessons = '';
+  student.init = function(name,age,lessons){
+    person.init.call(this, name, age); //Person constructor in context of Student.
+    this.lessons = lessons;
+
+    return this;
+  }
+
+  student.study = function(){
+    console.log("Studying...")
+  }
+
+  var student1 = Object.create(student).init("Miguel",26,"OOP js");
+  student1.greet();
+
+  </script>
+</body>
+</html>

@@ -18,4 +18,5 @@
    - Privileged Methods (Getters-Setters)
 5. Prototypes
 6. Heritage and Constructor
-7. Polymorphism  
+7. Polymorphism
+8. Object-based inheritance  
